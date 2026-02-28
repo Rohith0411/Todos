@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+body{
+  background-color: aqua;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f468;
+  padding: 20px;
+}
+
+.todo-box {
+  background: rgb(241, 239, 239);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 30px rgba(208, 13, 13, 0.804);
+  width: 100%;
+  max-width: 400px;
+}
+
+.title {
+  text-align: center;
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.search {
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(242, 244, 241, 0.9);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover{
+  text-decoration: underline;
+}
+
+.add-btn {
+  background-color: #28a745;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.add-btn:hover {
+  background-color: #218838;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filter-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.task-item span {
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.edit-btn {
+  background-color: rgb(183, 137, 231);
+  color: rgb(243, 241, 241);
+  margin: 5px;
+}
+
+.edit-btn:hover {
+  background-color: rgb(222, 13, 13);
+}
+
+.delete-btn {
+  background-color: rgb(223, 98, 21);
+  color: rgb(220, 218, 218);
+}
+
+.delete-btn:hover {
+  background-color: red;
+}
+
+.task-count {
+  text-align: center;
+  margin-top: 10px;
+  color: #555;
 }
